@@ -11,14 +11,11 @@ namespace audit
 			UserData userData = new UserData();
 			DepartmentData departmentData = new DepartmentData();
 
-			List<string> dataInput = new List<string>();
-
-			userData.FileData();
-			userData.Data(dataInput);
+			userData.Data();
 
 			departmentData.Data();
 
-			Console.WriteLine("Thank you! The data has been saved to .txt files!");
+			Console.WriteLine("Thank you! The data has been saved to a .txt file!");
 		}
 	}
 }

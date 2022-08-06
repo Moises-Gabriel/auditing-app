@@ -8,35 +8,26 @@ namespace audit
 {
     public class UserData
     {
-		public string name = String.Empty;
-		public string path = String.Empty;
-		public void FileData()
+		public string date = DateTime.Today.ToString("MM_d_yyyy");
+
+		public bool correctInput = true;
+
+		public string path()
         {
-			string date = new string(String.Empty);
-			path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments), $"{date}_audit.txt");
+			string dataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments), $"{date}_audit.txt");
+			return dataPath;
+        }
 
-
-			//File data
-			Console.WriteLine("Please input today's date (MM_DD_YY): ");
-			date = Console.ReadLine();
-			if (date == null || date.Length < 8)
-			{
-				Console.WriteLine("Date inputted incorrectly! Please try again.");
-				//Program program = new Program();
-				//program.Main(args);
-			}
-		}
-		public void Data(List<string> dataInput)
+		public void Data()
 		{
 			Console.WriteLine("Enter name: ");
-			name = Console.ReadLine();
-			dataInput.Add(name); //dataInput[0]
+			string name = Console.ReadLine();
 
 			Console.WriteLine("Enter AIN: ");
 			string ain = Console.ReadLine();
-			dataInput.Add(ain); //dataInput[1]
 
-			File.AppendAllText(path, dataInput[0] + Environment.NewLine + dataInput[1] + Environment.NewLine);
+			path();
+			File.AppendAllText(path(), name + Environment.NewLine + ain + Environment.NewLine);
 
 			Console.WriteLine("Thank you.");
 			Console.WriteLine("Please input Department Data.");

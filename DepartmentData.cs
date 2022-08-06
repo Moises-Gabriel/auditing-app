@@ -8,9 +8,9 @@ namespace audit
 {
     internal class DepartmentData
     {
-        UserData userData = new UserData();
         public void Data()
         {
+            UserData userData = new UserData();
             var newLine = Environment.NewLine;
 
             Console.WriteLine("How many departments were audited?");
@@ -53,7 +53,6 @@ namespace audit
                 Console.WriteLine(newLine);
 
                 //Print completed audit form
-                Console.WriteLine($"Audit Completed by: {userData.name}");
                 Console.WriteLine($"Audited Department: {depData[0]}");
                 Console.WriteLine($"Total Counted Merchandise: {totalData[0]}");
                 Console.WriteLine($"Missing Sensors: {depData[1]}");
@@ -77,7 +76,7 @@ namespace audit
 
                 for (int j = 0; j < data.Count; j++)
                 {
-                    File.AppendAllText(userData.path, Environment.NewLine + prefixes[j] + data[j] + Environment.NewLine);
+                    File.AppendAllText(userData.path(), Environment.NewLine + prefixes[j] + data[j] + Environment.NewLine);
                 }
             }
 		}
