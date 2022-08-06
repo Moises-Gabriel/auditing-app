@@ -24,7 +24,9 @@ namespace audit
 			string name = Console.ReadLine();
 
 			Console.WriteLine("Enter AIN: ");
-			string ain = Console.ReadLine();
+			string ainString = Console.ReadLine();
+			int ain = int.Parse(ainString);
+
 
 			path();
 			File.AppendAllText(path(), name + Environment.NewLine + ain + Environment.NewLine);

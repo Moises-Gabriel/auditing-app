@@ -1,0 +1,15 @@
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\bin\Release\net6.0\audit.exe
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\bin\Release\net6.0\audit.deps.json
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\bin\Release\net6.0\audit.runtimeconfig.json
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\bin\Release\net6.0\audit.dll
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\bin\Release\net6.0\audit.pdb
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\audit.csproj.AssemblyReference.cache
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\audit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\audit.AssemblyInfoInputs.cache
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\audit.AssemblyInfo.cs
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\audit.csproj.CoreCompileInputs.cache
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\audit.dll
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\refint\audit.dll
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\audit.pdb
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\audit.genruntimeconfig.cache
+C:\Users\mgoli\Documents\Desktop Apps\Auditing App\auditing-repo\auditing-app\obj\Release\net6.0\ref\audit.dll
