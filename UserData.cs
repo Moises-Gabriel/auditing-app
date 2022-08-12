@@ -20,16 +20,27 @@ namespace audit
 
 		public void Data()
 		{
+			bool correctInput = false;
 			Console.WriteLine("Enter name: ");
 			string name = Console.ReadLine();
 
 			Console.WriteLine("Enter AIN: ");
 			string ainString = Console.ReadLine();
-			int ain = int.Parse(ainString);
 
+            if (ainString.Length != 9)
+            {
+				Console.WriteLine("AIN was incorrect. Please try again.");
+				correctInput = false;
+			}
+            else
+            {
+				Console.WriteLine(ainString);
+				correctInput = true;
+				return;
+			}
 
 			path();
-			File.AppendAllText(path(), name + Environment.NewLine + ain + Environment.NewLine);
+			File.AppendAllText(path(), name + Environment.NewLine + ainString + Environment.NewLine);
 
 			Console.WriteLine("Thank you.");
 			Console.WriteLine("Please input Department Data.");
