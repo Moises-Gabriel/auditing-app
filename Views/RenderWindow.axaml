@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:audit.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="600"
+        x:Class="audit.Views.RenderWindow"
+        Title="Auditer"
+        Width="900" Height="600">
+
+  <Canvas>
+    <Grid ShowGridLines="True">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="175"></RowDefinition>
+        <RowDefinition Height="700"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="400"></ColumnDefinition>
+        <ColumnDefinition Width="0"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+
+      <!--Left Column 1-->
+      <Rectangle Grid.Column="0" Grid.Row="0" Fill="Gray"/>
+        <!--Section 1-->
+        <StackPanel Grid.Column="0" Grid.Row="0" Spacing="10">
+          <TextBlock Text="Name" Margin="10,10,0,0"/>
+          <TextBox Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+          <TextBlock Text="Associate ID" Margin="10,10,0,0"/>
+          <TextBox PasswordChar="*" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+        </StackPanel>
+
+      <!--Left Column 2-->
+      <Rectangle Grid.Column="0" Grid.Row="1" Fill="DarkGray"/>
+        <!--Section 2-->
+        <StackPanel Grid.Column="0" Grid.Row="1" Spacing="5">
+          <TextBlock Text="Department" Margin="10,10,0,0"/>
+          <TextBox Height="25" Width="200" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+          <TextBlock Text="Associate ID" Margin="10,0,0,0"/>
+          <TextBox PasswordChar="*" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+        </StackPanel>
+      <Button Grid.Row="2" Grid.Column="0" Background="Black">Submit</Button>
+
+      <!--Right Column-->
+      <Button Grid.Row="0" Grid.Column="1">Some text written on a button</Button>
+    </Grid>
+    <!--<SplitView IsPaneOpen="True" DisplayMode="Inline" OpenPaneLength="296">
+      <SplitView.Pane>
+        <TextBlock Text="Name"/>
+      </SplitView.Pane>
+      -->
+  </Canvas>
+  
+</Window>

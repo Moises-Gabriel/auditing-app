@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mgoli\\Documents\\Desktop Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj": {}
+    "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mgoli\\Documents\\Desktop Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj": {
+    "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mgoli\\Documents\\Desktop Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj",
+        "projectUniqueName": "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj",
         "projectName": "audit",
-        "projectPath": "C:\\Users\\mgoli\\Documents\\Desktop Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj",
+        "projectPath": "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj",
         "packagesPath": "C:\\Users\\mgoli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mgoli\\Documents\\Desktop Apps\\Auditing App\\auditing-repo\\auditing-app\\obj\\",
+        "outputPath": "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mgoli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,20 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[0.10.17, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[0.10.17, )"
+            },
+            "Avalonia.ReactiveUI": {
+              "target": "Package",
+              "version": "[0.10.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
