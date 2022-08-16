@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moliveri\\Documents\\GitHub\\auditing-app\\audit.csproj": {}
+    "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moliveri\\Documents\\GitHub\\auditing-app\\audit.csproj": {
+    "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moliveri\\Documents\\GitHub\\auditing-app\\audit.csproj",
+        "projectUniqueName": "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj",
         "projectName": "audit",
-        "projectPath": "C:\\Users\\moliveri\\Documents\\GitHub\\auditing-app\\audit.csproj",
-        "packagesPath": "C:\\Users\\moliveri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moliveri\\Documents\\GitHub\\auditing-app\\obj\\",
+        "projectPath": "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\audit.csproj",
+        "packagesPath": "C:\\Users\\mgoli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mgoli\\Documents\\Desktop_Apps\\Auditing App\\auditing-repo\\auditing-app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\moliveri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mgoli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

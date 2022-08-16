@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Avalonia;
+using Avalonia.ReactiveUI;
+using Avalonia.Input;
+using Avalonia.Interactivity;
+using Avalonia.Data;
+using Avalonia.Controls;
 
 namespace audit.Data
 {
@@ -18,7 +24,7 @@ namespace audit.Data
             return dataPath;
         }
 
-        public void Data()
+        public void RetrieveData(object sender,  RoutedEventArgs args)
         {
             Console.WriteLine("Enter name: ");
             string name = Console.ReadLine();
