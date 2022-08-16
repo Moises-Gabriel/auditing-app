@@ -9,35 +9,38 @@
         Width="700" Height="500">
 
   <Canvas>
-    <!--TODO: USE SPLITVIEW WITH GRID INSIDE SPLITVIEW-->
-    <Grid ShowGridLines="False">
-      <Grid.RowDefinitions>
-        <!--Top Row-->
-        <RowDefinition Height="155"></RowDefinition>
-        <!--Bottom Row-->
-        <RowDefinition Height="700"></RowDefinition>
-      </Grid.RowDefinitions>
+    <SplitView IsPaneOpen="True" DisplayMode="Inline" OpenPaneLength="250">
       
-      <Grid.ColumnDefinitions>
-        <!--Left Column-->
-        <ColumnDefinition Width="250"></ColumnDefinition>
-        <!--Right Column-->
-        <ColumnDefinition Width="450"></ColumnDefinition>
-      </Grid.ColumnDefinitions>
+      <!--Pane-->
+      <SplitView.Pane>
+        <Grid ShowGridLines="False">
+          <Grid.RowDefinitions>
+            <!--Top Row-->
+            <RowDefinition Height="155"></RowDefinition>
+            <!--Bottom Row-->
+            <RowDefinition Height="700"></RowDefinition>
+          </Grid.RowDefinitions>
 
-      <!--Left Side Grid-->
-      <!--Quadrant 1-->
-      <Rectangle Grid.Column="0" Grid.Row="0" Fill="#A8A4CE"/>
-        <StackPanel Grid.Column="0" Grid.Row="0" Spacing="10">
-          <TextBlock Text="Name" Margin="10,10,0,0"/>
-          <TextBox Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-          <TextBlock Text="Associate ID" Margin="10,10,0,0"/>
-          <TextBox PasswordChar="*" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-        </StackPanel>
+          <Grid.ColumnDefinitions>
+            <!--Left Column-->
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <!--Right Column-->
+            <ColumnDefinition Width="450"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
 
-      <!--Quadrant 2-->
-      <Rectangle Grid.Column="0" Grid.Row="1" Fill="#7A86B6"/>
-        <StackPanel Grid.Column="0" Grid.Row="1" Spacing="10" Margin="0,10,0,0">
+          <!--Left Side Grid-->
+          <!--Quadrant 1-->
+          <Rectangle Grid.Column="0" Grid.Row="0" Fill="#A8A4CE"/>
+          <StackPanel Grid.Column="0" Grid.Row="0" Spacing="10">
+            <TextBlock Text="Name" Margin="10,10,0,0"/>
+            <TextBox Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+            <TextBlock Text="Associate ID" Margin="10,10,0,0"/>
+            <TextBox PasswordChar="*" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+          </StackPanel>
+
+          <!--Quadrant 2-->
+          <Rectangle Grid.Column="0" Grid.Row="1" Fill="#7A86B6"/>
+          <StackPanel Grid.Column="0" Grid.Row="1" Spacing="10" Margin="0,10,0,0">
             <TextBlock Text="Department" Margin="10,10,0,0"/>
             <TextBox Height="25" Width="200" HorizontalAlignment="Left" Margin="10,0,0,0"/>
             <TextBlock Text="Total Counted" Margin="10,0,0,0"/>
@@ -46,22 +49,17 @@
             <TextBox Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
             <TextBlock Text="Missing Tickets" Margin="10,0,0,0"/>
             <TextBox Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-            <Button Name="Submit" Click="RetrieveData" Grid.Column="0" Grid.Row="1" Background="#495C83" Margin="10,5,0,0">Submit</Button>
+            <Button Name="Submit" Grid.Column="0" Grid.Row="1" Background="#495C83" Margin="10,5,0,0">Submit</Button>
           </StackPanel>
+        </Grid>
+      </SplitView.Pane>
 
-      <!--Right Side Grid-->
-      <!--Quadrant 3-->
-      <Rectangle Grid.Column="1" Grid.Row="0" Fill="#495C83"/>
-        <StackPanel Grid.Column="1" Grid.Row="0" Spacing="10">
-          
-        </StackPanel>
+      <!--Content-->
+      <StackPanel>
+        <TextBlock Text="TEsting"/>
+
+      </StackPanel>
       
-      <!--Quadrant 4-->
-      <Rectangle Grid.Column="1" Grid.Row="1" Fill="#495C83"/>
-        <StackPanel Grid.Column="1" Grid.Row="1" Spacing="10">
-          <TextBlock Text="Audited Department: "/>
-        </StackPanel>
-    </Grid>
+    </SplitView>
   </Canvas>
-  
 </Window>
