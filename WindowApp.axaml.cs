@@ -19,7 +19,7 @@ namespace audit
             {
                 desktop.MainWindow = new RenderWindow
                 {
-                    DataContext = new MainWindowViewModel(),
+                    DataContext = new FormView()
                 };
             }
 
