@@ -4,11 +4,13 @@ using System.IO;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using audit.ViewModels;
 
 namespace audit.Views
 {
     public partial class RenderWindow : Window
     {
+        FormView formView = new();
         public RenderWindow()
         {
             InitializeComponent();
@@ -17,6 +19,7 @@ namespace audit.Views
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
+            formView.RetrieveControls(this);
         }
     }
 }

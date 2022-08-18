@@ -1,11 +1,11 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:audit.ViewModels"
+        xmlns:vm="using:audit.ViewModels.FormView"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="500"
         x:Class="audit.Views.RenderWindow"
-        Title="Auditer"
+        Title="Moises Auditer"
         Width="700" Height="500">
 
   <Canvas>
@@ -18,7 +18,7 @@
             <!--Top Row-->
             <RowDefinition Height="155"></RowDefinition>
             <!--Bottom Row-->
-            <RowDefinition Height="700"></RowDefinition>
+            <RowDefinition Height="545"></RowDefinition>
           </Grid.RowDefinitions>
 
           <Grid.ColumnDefinitions>
@@ -30,35 +30,41 @@
 
           <!--Left Side Grid-->
           <!--Quadrant 1-->
-          <Rectangle Grid.Column="0" Grid.Row="0" Fill="#A8A4CE"/>
+          <Rectangle Grid.Column="0" Grid.Row="0" Fill="#525252"/>
           <StackPanel Grid.Column="0" Grid.Row="0" Spacing="10">
-            <TextBlock Name="Name_Text" Text="Name" Margin="10,10,0,0"/>
-            <TextBox Name="Name_Box" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-            <TextBlock Text="Associate ID" Margin="10,10,0,0"/>
-            <TextBox Name="ID_Box" PasswordChar="*" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+            <TextBlock Text="Name" Foreground="#EFEAD8" Margin="10,10,0,0"/>
+            <TextBox Name="NAME" Text="{Binding TextBoxes[0]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+            <TextBlock Text="Associate ID" Foreground="#EFEAD8" Margin="10,10,0,0"/>
+            <TextBox PasswordChar="*" Name="ID" Text="{Binding TextBoxes[1]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
           </StackPanel>
 
           <!--Quadrant 2-->
-          <Rectangle Grid.Column="0" Grid.Row="1" Fill="#7A86B6"/>
+          <Rectangle Grid.Column="0" Grid.Row="1" Fill="#414141"/>
           <StackPanel Grid.Column="0" Grid.Row="1" Spacing="10" Margin="0,10,0,0">
-            <TextBlock Text="Department" Margin="10,10,0,0"/>
-            <TextBox Text="{Binding FormView.deptData[0]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-            <TextBlock Text="Total Counted" Margin="10,0,0,0"/>
-            <TextBox Text="{Binding deptData[1]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-            <TextBlock Text="Missing Sensors" Margin="10,0,0,0"/>
-            <TextBox Text="{Binding deptData[2]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-            <TextBlock Text="Missing Tickets" Margin="10,0,0,0"/>
-            <TextBox Text="{Binding deptData[3]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-            <Button Name="Submit" IsEnabled="True" Command="{Binding OnClick}" Grid.Column="0" Grid.Row="1" Background="#495C83" Margin="10,5,0,0">Submit</Button>
+            <TextBlock Text="Department" Foreground="#EFEAD8" Margin="10,10,0,0"/>
+            <TextBox Name="DEP" Text="{Binding TextBoxes[2]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,0,0,0"/>
+            <TextBlock Text="Total Counted" Foreground="#EFEAD8" Margin="10,0,0,0"/>
+            <TextBox Name="TOTAL" Text="{Binding TextBoxes[3]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+            <TextBlock Text="Missing Sensors" Foreground="#EFEAD8" Margin="10,0,0,0"/>
+            <TextBox Name="SENSORS" Text="{Binding TextBoxes[4]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+            <TextBlock Text="Missing Tickets" Foreground="#EFEAD8" Margin="10,0,0,0"/>
+            <TextBox Name="TICKETS" Text="{Binding TextBoxes[5]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
+            <Button IsEnabled="True" Command="{Binding Submit}" Background="#CA3E47" Grid.Column="0" Grid.Row="1" Margin="10,5,0,0">Submit</Button>
           </StackPanel>
         </Grid>
       </SplitView.Pane>
 
       <!--Content-->
-      <StackPanel>
-        <TextBlock Text="TEsting"/>
-
-      </StackPanel>
+      <Grid RowDefinitions="500" Width="450" Background="#313131">
+        <StackPanel>
+          <TextBlock Text="{Binding FormData[0]}"/>
+          <TextBlock Text="{Binding FormData[1]}"/>
+          <TextBlock Text="{Binding FormData[2]}"/>
+          <TextBlock Text="{Binding FormData[3]}"/>
+          <TextBlock Text="{Binding FormData[4]}"/>
+          <TextBlock Text="{Binding FormData[5]}"/>
+        </StackPanel>
+      </Grid>
       
     </SplitView>
   </Canvas>

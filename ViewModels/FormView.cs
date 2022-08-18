@@ -1,37 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Avalonia.Interactivity;
-using Avalonia.ReactiveUI;
-using Avalonia.Reactive;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 using Avalonia.Controls;
+using ReactiveUI;
+using audit.Views;
 
 namespace audit.ViewModels
 {
-    public class FormView:ViewModelBase
+    public class FormView : ViewModelBase
     {
-        private List<string> dataList = new List<string>();
-
-        public List<string> userData = new List<string>();
-        public List<string> deptData = new List<string>();
-
-        public FormView()
+        //Collection of Form Data
+        private ObservableCollection<string> formData = new ObservableCollection<string>(new string[6]);
+        public ObservableCollection<string> FormData
         {
-            var command = ReactiveUI.ReactiveCommand.Create(OnClick);
+            get => formData;
+            set => this.RaiseAndSetIfChanged(ref formData, value);
         }
 
-        public void OnClick()
+        //Collection of Text Boxes
+        private ObservableCollection<string> textBoxes = new ObservableCollection<string>(new string[6]);
+        public ObservableCollection<string> TextBoxes
         {
-            //Add User Form Data to List
-            dataList.Add(userData[0]);
-            dataList.Add(userData[1]);
-            //Add Department Form Data to List
-            dataList.Add(deptData[0]);
-            dataList.Add(deptData[1]);
-            dataList.Add(deptData[2]);
-            dataList.Add(deptData[3]);
+            get => textBoxes;
+            set => this.RaiseAndSetIfChanged(ref textBoxes, value);
+        }
+
+        //Form Data
+        string? name;
+        string? id;
+        string? dep;
+        string? total;
+        string? sensors;
+        string? tickets;
+
+        //Submit button command
+        public ICommand Submit { get; private set; }
+        public FormView()
+        {
+            Submit = ReactiveCommand.Create(() =>
+            {
+                //Assign the textboxes' text to the Form Data
+                for (int i = 0; i < FormData.Count; i++)
+                {
+                    FormData[i] = TextBoxes[i];
+                }
+            });
+        }
+
+        //Find Controls and store them
+        public void RetrieveControls(RenderWindow renderWindow)
+        {
+            name = renderWindow.FindControl<TextBox>("NAME").Text;
+            id = renderWindow.FindControl<TextBox>("ID").Text;
+            dep = renderWindow.FindControl<TextBox>("DEP").Text;
+            total = renderWindow.FindControl<TextBox>("TOTAL").Text;
+            sensors = renderWindow.FindControl<TextBox>("SENSORS").Text;
+            tickets = renderWindow.FindControl<TextBox>("TICKETS").Text;
+
+            textBoxes.Add(name);
+            textBoxes.Add(id);
+            textBoxes.Add(dep);
+            textBoxes.Add(total);
+            textBoxes.Add(sensors);
+            textBoxes.Add(tickets);
         }
     }
 }
