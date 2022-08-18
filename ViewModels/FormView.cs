@@ -25,12 +25,12 @@ namespace audit.ViewModels
         }
 
         //Form Data
-        string? name;
-        string? id;
-        string? dep;
-        string? total;
-        string? sensors;
-        string? tickets;
+        public string name;
+        public string id;
+        public string dep;
+        public string total;
+        public string sensors;
+        public string tickets;
 
         //Submit button command
         public ICommand Submit { get; private set; }

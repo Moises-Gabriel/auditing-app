@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Avalonia;
-using Avalonia.ReactiveUI;
-using Avalonia.Input;
-using Avalonia.Interactivity;
-using Avalonia.Data;
-using Avalonia.Controls;
+﻿using Avalonia.Interactivity;
+using audit.ViewModels;
+
 
 namespace audit.Data
 {
@@ -16,7 +8,7 @@ namespace audit.Data
     {
         public string date = DateTime.Today.ToString("MM_d_yyyy");
 
-        public bool correctInput = true;
+        public FormView? formView;
 
         public string path()
         {
@@ -24,25 +16,19 @@ namespace audit.Data
             return dataPath;
         }
 
-        public void RetrieveData(object sender,  RoutedEventArgs args)
+        public void RetrieveData()
         {
-            Console.WriteLine("Enter name: ");
-            string name = Console.ReadLine();
-
-            Console.WriteLine("Enter Associate ID: ");
-            string idString = Console.ReadLine();
+            string name = formView.name;
+            string idString = formView.id;
 
             while (string.IsNullOrEmpty(idString) || idString.Length < 9)
             {
-                Console.WriteLine("ID is incorrect. Please try again.");
-                idString = Console.ReadLine();
+                //Display warning 
             }
 
+            //Save to txt file
             path();
             File.AppendAllText(path(), name + Environment.NewLine + idString + Environment.NewLine);
-
-            Console.WriteLine("Thank you.");
-            Console.WriteLine("Please input Department Data.");
         }
     }
 }
