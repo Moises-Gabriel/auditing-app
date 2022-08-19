@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="500"
         x:Class="audit.Views.RenderWindow"
-        Title="Retail Auditer"
+        Title="Retail Auditor"
         Width="700" Height="500">
 
   <Canvas>
@@ -32,9 +32,9 @@
           <!--Quadrant 1-->
           <Rectangle Grid.Column="0" Grid.Row="0" Fill="#525252"/>
           <StackPanel Grid.Column="0" Grid.Row="0" Spacing="10">
-            <TextBlock Text="Name" Foreground="#EFEAD8" Margin="10,10,0,0"/>
+            <TextBlock Text="Name" FontWeight="DemiBold" Foreground="#EFEAD8" Margin="10,10,0,0"/>
             <TextBox Name="NAME" Text="{Binding TextBoxes[0]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-            <TextBlock Text="Associate ID" Foreground="#EFEAD8" Margin="10,10,0,0"/>
+            <TextBlock Text="Associate ID" FontWeight="DemiBold" Foreground="#EFEAD8" Margin="10,10,0,0"/>
             <TextBox PasswordChar="*" Name="ID" Text="{Binding TextBoxes[1]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
           </StackPanel>
 
@@ -49,7 +49,14 @@
             <TextBox Name="SENSORS" Text="{Binding TextBoxes[4]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
             <TextBlock Text="Missing Tickets" Foreground="#EFEAD8" Margin="10,0,0,0"/>
             <TextBox Name="TICKETS" Text="{Binding TextBoxes[5]}" Height="25" Width="200" HorizontalAlignment="Left" Margin="10,-5,0,0"/>
-            <Button IsEnabled="True" Command="{Binding Submit}" Background="#CA3E47" Grid.Column="0" Grid.Row="1" Margin="10,5,0,0">Submit</Button>
+
+            <!--Buttons-->
+            <StackPanel Orientation="Horizontal">
+              <Button IsEnabled="True" Command="{Binding Submit}" Background="#CA3E47" Margin="10,5,0,0">Submit</Button>
+              <!--TODO: Move button to the Content side for user clarity-->
+              <Button IsEnabled="True" Command="{Binding Clear}" Background="#313131" Margin="10,5,0,0">Clear</Button>
+            </StackPanel>
+            
           </StackPanel>
         </Grid>
       </SplitView.Pane>
@@ -57,12 +64,14 @@
       <!--Content-->
       <Grid RowDefinitions="500" Width="450" Background="#313131">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-          <TextBlock Text="{Binding FormData[0]}"/>
-          <TextBlock Text="{Binding FormData[1]}"/>
-          <TextBlock Text="{Binding FormData[2]}"/>
-          <TextBlock Text="{Binding FormData[3]}"/>
-          <TextBlock Text="{Binding FormData[4]}"/>
-          <TextBlock Text="{Binding FormData[5]}"/>
+          <TextBlock Name="WARNING" Text="{Binding WARNING}" FontWeight="Bold" Foreground="#CA3E47"/>
+          <TextBlock Name="OP_NAME" Text="{Binding FormData[0]}"/>
+          <TextBlock Name="OP_DEP" Text="{Binding FormData[2]}"/>
+          <TextBlock Name="OP_TOTAL" Text="{Binding FormData[3]}"/>
+          <TextBlock Name="OP_SENS" Text="{Binding FormData[4]}"/>
+          <TextBlock Name="OP_TIC" Text="{Binding FormData[5]}"/>
+          <TextBlock Name="OP_SENS_COMP" Text="{Binding Compliance[0]}"/>
+          <TextBlock Name="OP_TIC_COMP" Text="{Binding Compliance[1]}"/>
         </StackPanel>
       </Grid>
       
