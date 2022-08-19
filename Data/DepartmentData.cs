@@ -72,12 +72,12 @@ namespace audit.Data
                     //Calculate compliance
                     float senAns = depData[1] / (float)totalData[0] * 100;
                     float senCompliance = 100 - senAns;
-                    formView.Compliance[0] = senCompliance.ToString() + "%";
+                    formView.Compliance[0] = "Sensor Compliance: " + senCompliance.ToString() + "%";
                     data.Add(senCompliance.ToString() + "%");
 
                     float tickAns = depData[2] / (float)totalData[0] * 100;
                     float tickCompliance = 100 - tickAns;
-                    formView.Compliance[1] = tickCompliance.ToString() + "%";
+                    formView.Compliance[1] = "Ticket Compliance: " + tickCompliance.ToString() + "%";
                     data.Add(tickCompliance.ToString() + "%");
 
                     SaveToFile(data, userData);

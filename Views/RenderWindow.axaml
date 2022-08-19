@@ -6,6 +6,7 @@
         mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="500"
         x:Class="audit.Views.RenderWindow"
         Title="Retail Auditor"
+        Icon="C:\Users\mgoli\Documents\Desktop_Apps\Auditing App\auditing-repo\auditing-app\Icon\auditor_icon.png"
         Width="700" Height="500">
 
   <Canvas>
@@ -63,7 +64,7 @@
 
       <!--Content-->
       <Grid RowDefinitions="500" Width="450" Background="#313131">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Spacing="20" HorizontalAlignment="Center" VerticalAlignment="Center">
           <TextBlock Name="WARNING" Text="{Binding WARNING}" FontWeight="Bold" Foreground="#CA3E47"/>
           <TextBlock Name="OP_NAME" Text="{Binding FormData[0]}"/>
           <TextBlock Name="OP_DEP" Text="{Binding FormData[2]}"/>
