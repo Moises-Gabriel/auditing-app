@@ -2,6 +2,7 @@
 MERCHANDISE AUDITING APP FOR RETAIL STORES
 
 Created as a way to simplify the task of auditing merchandise when I worked as a Loss Prevention associate.
+
 The user:
 - Inputs associate data.
 - Inputs department data.
