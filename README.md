@@ -2,7 +2,7 @@
 MERCHANDISE AUDITING APP FOR RETAIL STORES
 
 I created this app as a way to simplify the task of auditing merchandise when I worked as a Loss Prevention associate.
-Basically the user inputs data relating to the department that is being audited and the app will output a calculated response.
+The user inputs data relating to the department that is being audited and the app will output a calculated response.
 The response displays the user's and department's information as well as the compliance percentage for the department.
 
 In addition to simply displaying the information, the app will save an appropriately named .txt file to the user's Public Documents folder with the information.
