@@ -6,7 +6,7 @@ Created as a way to simplify the task of auditing merchandise when I worked as a
 The user:
 - Inputs associate data.
 - Inputs department data.
-- Receives a list of the organized data with addition department compliance percentages.
+- Receives a list of the organized data with additional department compliance percentages.
 
 In addition to simply displaying the information, the user has the option to save an appropriately named .txt  or .pdf file to the user's Public Documents folder with the information allowing for easy sharing with store management.
 
