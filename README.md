@@ -9,5 +9,3 @@ In addition to simply displaying the information, the app will save an appropria
 This makes it easy to share the findings with store management.
 
 ![example_1](https://user-images.githubusercontent.com/62576670/185679696-19abb2fc-1b2a-4585-8ea1-d2ad09cdf3c4.gif)
-
-*The code can/will be cleaned up over time.*
