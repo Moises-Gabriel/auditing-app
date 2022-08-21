@@ -1,4 +1,4 @@
-# Retail Auditor v1.0.0
+# EasyAudit v1.0.0
 ## MERCHANDISE AUDITING APP FOR RETAIL STORES
 
 Created as a way to simplify the task of auditing merchandise when I worked as a Loss Prevention associate.
